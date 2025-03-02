@@ -1,12 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import meSvg from "../assets/me.svg"
 ---
 
 <Layout>
     <div class="justify-center">
       <h1 class="text-2xl">A bit about me</h1>
       <div class="p-4"></div>
-      <img class="w-60" src="src/assets/me.svg" alt="stickman figure representing an image of the creator of the website "/>
+      <img class="w-60" src={meSvg.src} alt="stickman figure representing an image of the creator of the website "/>
       <span>
         I thought about making a inconceivable portfolio!! Then I realized it's
         1:14am, and I have work tomorrow. At any rate, i'm a computer
