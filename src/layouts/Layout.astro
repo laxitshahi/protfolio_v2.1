@@ -1,6 +1,6 @@
 ---
-import '../styles/global.css'
-import Navbar from '../components/Navbar.astro'
+import '@styles/global.css'
+import Navbar from '@components/Navbar.astro'
 ---
 <!doctype html>
 <html lang="en">
@@ -13,8 +13,6 @@ import Navbar from '../components/Navbar.astro'
 	</head>
 	<body class="grid place-items-start px-12 py-4 sm:px-20 sm:py-8 md:px-44 md:py-12 lg:px-72 lg:py-14 xl:px-72 xl:py-14">
 		<Navbar/>
-		<!--spacer-->
-		<div class="p-10"/>
 		<slot />
 	</body>
 </html>
