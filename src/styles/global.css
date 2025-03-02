@@ -1,1 +1,25 @@
 @import "tailwindcss";
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.50rem;
+}
+
+h4 {
+  font-size: 1.25;
+}
+
+h5 {
+  font-size: 1.00rem;
+}
+
+h6 {
+  font-size: 0.75rem;
+}

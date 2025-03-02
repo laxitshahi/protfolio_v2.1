@@ -1,10 +1,38 @@
 ---
 import Layout from "@layouts/Layout.astro";
 
-const posts = Object.values(import.meta.glob('./posts/*.md', {eager: true}))
+const posts = Object.values(import.meta.glob("./posts/*.md", { eager: true }));
 ---
+
 <Layout>
-<ul>
-  {posts.map(post => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
-</ul>
+  <h1 class="text-2xl">My writing</h1>
+
+  <div class="p-4"></div>
+
+  <ul class="container">
+    {
+      posts.map((post) => (
+        <li>
+          <a href={post.url}>{post.frontmatter.title}</a>
+        </li>
+      ))
+    }
+  </ul>
 </Layout>
+
+<style>
+  :global(.container li) {
+    list-style-type: square;
+    margin-left: 24px;
+    text-decoration: underline;
+    text-decoration-color: lightgray;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    transition: text-decoration-thickness 0.2s ease;
+  }
+
+  :global(.container li:hover) {
+    text-decoration-thickness: 3px;
+    text-decoration-color: #0366d6;
+  }
+</style>

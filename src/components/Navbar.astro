@@ -1,16 +1,18 @@
 ---
-  const links = [
-    { name: "home", url: "/" },
-    { name: "about", url: "/about" },
-    { name: "projects", url: "/projects" },
-    // { name: "iwrite", url: "/iwrite" },
-  ];
+const links = [
+  { name: "home", url: "/" },
+  { name: "about", url: "/about" },
+  { name: "projects", url: "/projects" },
+  { name: "iwrite", url: "/iwrite" },
+];
 ---
 
 <ul class="flex space-x-4 pb-20">
-  {links.map((link) => (
-    <li class="hover:cursor-pointer">
-      <a href={link.url}>{link.name}</a>
-    </li>
-  ))}
+  {
+    links.map((link) => (
+      <li class="hover:cursor-pointer">
+        <a href={link.url}>{link.name}</a>
+      </li>
+    ))
+  }
 </ul>
