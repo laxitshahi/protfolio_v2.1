@@ -1,0 +1,15 @@
+---
+  const links = [
+    { name: "home", url: "/" },
+    { name: "about", url: "/about" },
+    { name: "projects", url: "/projects" },
+  ];
+---
+
+<ul class="flex space-x-4">
+  {links.map((link) => (
+    <li class="hover:cursor-pointer">
+      <a href={link.url}>{link.name}</a>
+    </li>
+  ))}
+</ul>

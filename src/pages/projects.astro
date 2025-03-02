@@ -1,0 +1,47 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+ const projects = [
+    {
+      name: "LLM Proxy",
+      desc: "Make LLMs simple",
+      link: "https://github.com/llm-proxy/llm-proxy",
+    },
+    {
+      name: "Patch",
+      desc: "Price + Match",
+      link: "https://github.com/laxitshahi/patch",
+    },
+    {
+      name: "Portfolio v1",
+      desc: "Version 1 portfolio",
+      link: "https://v1.laxitshahi.me",
+    },
+  ];
+---
+
+<Layout>
+<h1 class="text-2xl">Rad[ical] projects</h1>
+      <div class="p-4"></div>
+      <ul class="space-y-2">
+        {projects.map((proj) => {
+          return (
+            <div class="flex space-x-2 items-center">
+              <a
+                href={proj.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="font-semibold hover:cursor-pointer hover:underline decoration-white"
+              >
+                {proj.name}
+              </a>
+
+              <span>
+                {" | "}
+                {proj.desc}
+              </span>
+            </div>
+          );
+        })}
+      </ul>
+</Layout>
