@@ -1,0 +1,32 @@
+---
+const links = [
+  { name: "@github ", url: "https://github.com/laxitshahi" },
+  { name: ".linkedin", url: "https://www.linkedin.com/in/laxitshahi/" },
+  { name: "to:email", url: "https://theuselessweb.com/" },
+];
+---
+
+<ul class="flex space-x-4 pt-20">
+  {
+    links.map((link) => (
+      <li secret-li>
+        <a href={link.url}>{link.name}</a>
+      </li>
+    ))
+  }
+</ul>
+
+<script>
+  const buttons = document.querySelectorAll("[secret-li]");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      const target = e.target as HTMLElement;
+      if (target && target.innerText === "to:email") {
+        alert(
+          "speical website unlocked!! Sometimes I wonder if the only purpose of posting your email on your portfolio is to be scrapped. To be scraped, or not to be craped, tis the question.",
+        );
+      }
+    });
+  });
+</script>

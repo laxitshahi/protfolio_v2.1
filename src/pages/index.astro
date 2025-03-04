@@ -1,21 +1,47 @@
 ---
 import Layout from "@layouts/Layout.astro";
 
-const randomPercentage = Math.floor(Math.random() * 99) + 1;
+const randomPercentage = Math.floor(Math.random() * 49) + 51;
 ---
 
 <Layout>
   <body>
-    <h1 class="text-2xl">Howdy 88</h1>
+    <h1 class="cursor-pointer text-2xl flex gap-x-2 parent-dance">
+      <div>Howdy</div>
+      <div class="dance">🕺</div>
+    </h1>
     <div class="p-4"></div>
     <div>
       My name's Laxit. I'm a software engineer who likes to write code with
       bare, ungloved, hands. I also fancy neovim, books, and working out{" "}
-      <span class="italic">({randomPercentage}% of the time)</span>. Currently, I'm working at {
-        ""
-      }
+      <span class="italic">({randomPercentage}% of the time)</span>. Currently,
+      I'm working at {""}
       <span class="line-through"> Spotify</span> Shopify - helping improve the POS
       system.
     </div>
   </body>
 </Layout>
+
+<style>
+  @keyframes dance {
+    0% {
+      transform: translateX(0) scaleX(1);
+    }
+    25% {
+      transform: translateX(10px) scaleX(-1);
+    }
+    50% {
+      transform: translateX(0) scaleX(1);
+    }
+    75% {
+      transform: translateX(-10px) scaleX(-1);
+    }
+    100% {
+      transform: translateX(0) scaleX(1);
+    }
+  }
+
+  .parent-dance:hover .dance {
+    animation: dance 3s infinite ease-in-out;
+  }
+</style>

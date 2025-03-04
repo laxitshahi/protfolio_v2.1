@@ -1,24 +1,46 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import meSvg from "@assets/me.svg";
+import { Image } from "astro:assets";
+
+const passionSynynomns = ["passion", "fervor", "zeal", "enthusiam"];
 ---
 
 <Layout>
   <div class="justify-center">
     <h1 class="text-2xl">A bit about me</h1>
     <div class="p-4"></div>
-    <img
-      class="w-60"
-      src={meSvg.src}
+
+    <Image
+      class="disappear"
+      src={meSvg}
       alt="stickman figure representing an image of the creator of the website "
     />
     <span>
       I thought about making a inconceivable portfolio!! Then I realized it's
       1:14am, and I have work tomorrow. At any rate, i'm a computer engineering
       graduate who fell in love with the level of ability to create something
-      from almost nothing with software. This passion grew rapidly through my
-      personal projects and experiences at companies like Shopify, Intact, and
-      goeasy. I've also dabbled in startups - one of the most difficult but
+      from almost nothing with software, then scale up to immense value. This {
+        passionSynynomns.map((syn) => (
+          <Fragment>
+            <span class="line-through">{syn}</span> <span> </span>
+          </Fragment>
+        ))
+      } ardor grew rapidly through my personal projects and experiences at companies
+      like
+      <span class="underline decoration-blue-500"
+        ><a class="cursor-pointer" href="https://www.shopify.com">Shopify</a
+        ></span
+      >,
+      <span class="underline decoration-blue-500">
+        <a
+          class="cursor-pointer"
+          href="https://www.intactfc.com/about-us/intact-lab">Intact</a></span
+      >, and
+      <span class="underline decoration-blue-500"
+        ><a class="cursor-pointer" href="https://www.goeasy.com/">goeasy</a
+        ></span
+      >. I've also dabbled in the world of startups - one of the most difficult but
       fulfilling experiences in my life.
       <span class="hover:text-white text-black hover:cursor-pointer">
         <span class="italic"> Note to self:</span> Make sure to finish this section

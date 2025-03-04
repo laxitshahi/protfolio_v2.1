@@ -1,6 +1,7 @@
 ---
 import "@styles/global.css";
 import Navbar from "@components/Navbar.astro";
+import Footer from "@components/Footer.astro";
 ---
 
 <!doctype html>
@@ -22,7 +23,10 @@ import Navbar from "@components/Navbar.astro";
     class="grid place-items-start px-12 py-4 sm:px-20 sm:py-8 md:px-44 md:py-12 lg:px-96 lg:py-14 xl:px-96 xl:py-14"
   >
     <Navbar />
+
     <slot />
+
+    <Footer />
   </body>
 </html>
 
